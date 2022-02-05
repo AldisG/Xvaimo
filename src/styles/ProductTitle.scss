@@ -1,0 +1,29 @@
+@import '../styles/sharedStyles.scss';
+
+.header-wrapper {
+  display: grid;
+  grid-template-areas:
+    'headA headA headA headA headA'
+    'headB headB headB . tags';
+}
+
+.product-title {
+  grid-area: headA;
+  font-size: 1.6rem;
+}
+
+.product-title2 {
+  grid-area: headB;
+  font-size: 1.6rem;
+}
+
+.hot-sale-products {
+  grid-area: tags;
+  align-self: flex-end;
+  padding: 0.2rem 0.4rem;
+  margin-left: 1rem;
+  background-color: $lightGrey;
+  color: $darkGrey;
+  width: max-content;
+  height: max-content;
+}

@@ -1,0 +1,33 @@
+@import './sharedStyles.scss';
+
+$black: #333;
+$white: #fff;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+a {
+  color: $white;
+}
+img {
+  width: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+body,
+input,
+button {
+  font-family: 'Nunito Sans', sans-serif;
+}
+.App {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+// h1,h2,h3,h4,h5,h6{}

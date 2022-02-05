@@ -1,0 +1,16 @@
+@import '../styles//sharedStyles.scss';
+
+.product-ratings-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.product-ratings__stars-wrapper {
+  display: flex;
+}
+.product-ratings__span {
+  padding-left: 0.5rem;
+  color: $orange;
+}
+.product-ratings__reviews {
+  color: $darkGrey;
+}
