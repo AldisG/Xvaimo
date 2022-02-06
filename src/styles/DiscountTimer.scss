@@ -1,0 +1,18 @@
+@import './sharedStyles.scss';
+
+.discount-timer-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2.2em;
+  color: $darkGrey;
+}
+.discount-timer__procent {
+  font-weight: 700;
+  color: $orangeBright;
+}
+.discount-timer {
+  gap: 0.5em;
+}
+.discount-timer__time-left {
+  gap: 0.8em;
+}

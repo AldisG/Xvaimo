@@ -1,0 +1,36 @@
+@import '../styles/sharedStyles.scss';
+.banner-offer-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  background-color: $lightOrange;
+}
+.banner-offer__header {
+  border-top-right-radius: 2rem;
+  padding: 0.3rem 1rem 0.2rem 1rem;
+  font-size: 0.8rem;
+  flex-direction: column;
+  color: $white;
+  font-weight: 800;
+  background-color: $orangeBright;
+}
+.banner-offer-expo_header {
+  font-size: 1.3rem;
+}
+.banner-offer__free-shipping {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  color: $orangeBright;
+  font-weight: 700;
+  list-style-type: circle !important;
+}
+.banner-offer__text-wrapper {
+  gap: 0.5rem;
+}
+.circle {
+  width: 3px;
+  height: 3px;
+  background-color: $orangeBright;
+  border-radius: 10px;
+}

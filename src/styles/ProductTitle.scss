@@ -20,10 +20,11 @@
 .hot-sale-products {
   grid-area: tags;
   align-self: flex-end;
-  padding: 0.2rem 0.4rem;
+  padding: $tagPaddings;
   margin-left: 1rem;
-  background-color: $lightGrey;
+  background-color: $veryLightGrey;
   color: $darkGrey;
   width: max-content;
   height: max-content;
+  opacity: 0.8;
 }

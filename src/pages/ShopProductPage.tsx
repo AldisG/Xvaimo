@@ -25,7 +25,7 @@ const ShopProductPage = () => {
         <>
           <ProductImage imageSrc={productData?.gallery[0].main} />
           <Description product={productData} />
-          <BuySection />
+          <BuySection shipping={productData.shipping} />
         </>
       )}
     </div>

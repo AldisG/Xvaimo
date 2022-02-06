@@ -3,9 +3,10 @@ import '../../../styles/ProductTitle.scss';
 
 type Props = {
   title: string;
+  tags: string[];
 };
 
-const ProductTitle: FC<Props> = ({ title }) => {
+const ProductTitle: FC<Props> = ({ title, tags }) => {
   const titlelength = title.split(' ').length;
   const firstHalfTitle = title
     .split(' ')
@@ -20,7 +21,7 @@ const ProductTitle: FC<Props> = ({ title }) => {
     <div className="header-wrapper">
       <h1 className="product-title">{firstHalfTitle}</h1>
       <h1 className="product-title2">{RestOfHalfTitle}</h1>
-      <div className="hot-sale-products">Hot sale products</div>
+      <div className="hot-sale-products">{tags[0]}</div>
     </div>
   );
 };

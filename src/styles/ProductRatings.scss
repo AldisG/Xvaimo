@@ -3,6 +3,10 @@
 .product-ratings-wrapper {
   display: flex;
   gap: 1rem;
+  & * {
+    display: flex;
+    align-items: center;
+  }
 }
 .product-ratings__stars-wrapper {
   display: flex;
@@ -13,4 +17,7 @@
 }
 .product-ratings__reviews {
   color: $darkGrey;
+}
+.product-ratings__buyers {
+  font-weight: 500;
 }

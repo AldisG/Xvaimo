@@ -1,17 +1,31 @@
 $orange: #ff6600;
+$orangeBright: #ff9208;
 $redIsh: #f5515e;
 $lightOrange: #fff0e6;
 $white: #fff;
-$lightGrey: #d6d6d6;
-$darkGrey: #868686;
+$veryLightGrey: #e2e2e2;
+$lightGrey: #aaaaaa;
+$darkGrey: #727272;
 $black: #333;
+$tagPaddings: 0.2rem 0.8rem;
 
 .flex-c-c {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.star-icon,
 .checkmark-icon {
   width: 10px;
+}
+.star-icon,
+.clock-icon {
+  width: 12px;
+}
+.arrow-right-icon {
+  width: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $lightGrey;
 }

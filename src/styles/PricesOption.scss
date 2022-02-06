@@ -1,0 +1,31 @@
+@import '../styles/sharedStyles.scss';
+
+.prices-option__relavent-info {
+  display: flex;
+  gap: 0.5rem;
+  & * {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+.current-price {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: $orange;
+}
+.span--options__light {
+  color: $lightGrey;
+}
+.span--options__bold {
+  padding-left: 1rem;
+  font-weight: 700;
+}
+.span--options__min-order {
+  padding-left: 0.4rem;
+  color: $lightGrey;
+}
+.old-price {
+  text-decoration: 1px line-through $lightGrey;
+  position: relative;
+  color: $lightGrey;
+}

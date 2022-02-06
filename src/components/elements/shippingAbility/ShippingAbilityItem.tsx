@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Checkmark from '../Checkmark';
+import Checkmark from '../assets/Checkmark';
 
 type Props = {
   item: string;

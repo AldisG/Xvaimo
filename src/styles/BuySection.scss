@@ -1,0 +1,14 @@
+@import '../styles/sharedStyles.scss';
+
+.spp__buy-section {
+  width: 100%;
+}
+.spp__buy-section-wrapper {
+  padding: 1.8rem;
+  box-shadow: 0 0 0.8rem $veryLightGrey;
+  border-radius: 0.8rem;
+}
+.shipping-and-sum {
+  display: flex;
+  justify-content: space-between;
+}

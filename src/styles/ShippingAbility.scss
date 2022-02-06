@@ -9,7 +9,7 @@
   align-content: center;
   justify-items: center;
   gap: 0.3rem;
-  padding: 0.2rem 0.4rem;
+  padding: $tagPaddings;
 }
 .accent-light {
   background-color: $lightOrange;

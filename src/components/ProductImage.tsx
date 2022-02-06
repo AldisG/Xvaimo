@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './ProductImage.scss';
+import '../styles/ProductImage.scss';
 
 type Props = {
   imageSrc: string;

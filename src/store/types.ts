@@ -24,7 +24,7 @@ export type Options = {
   battery_accessories: OptionsDescription;
 };
 
-type OptionsDescription = {
+export type OptionsDescription = {
   label: string;
   price: PriceCur;
   old_price: PriceCur;
