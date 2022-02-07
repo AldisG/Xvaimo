@@ -61,7 +61,7 @@ const BuySection: FC<Props> = ({ shipping }) => {
         </div>
 
         <div className="flex-c-c button-wrapper">
-          <button className="large-btn ">Login to Purchase</button>
+          <button className="large-btn">Login to Purchase</button>
           <button className="large-btn contact-button">
             Contact the Supplier
           </button>

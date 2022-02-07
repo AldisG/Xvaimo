@@ -13,12 +13,12 @@ const ShopProductPage = () => {
   useEffect(() => {
     if (data && !isError) {
       setProductData(data.product);
-      console.log(data.product);
     }
   }, [data]);
+
   if (isLoading) return <h1>Loading...</h1>;
   if (!isLoading && isError) return <h1>Error fetching data{error}</h1>;
-  //  spp stands for ShopProductPage
+
   return (
     <div className="ShopProductPage-container">
       {productData && (

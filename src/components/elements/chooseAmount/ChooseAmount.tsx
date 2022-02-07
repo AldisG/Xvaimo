@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { useAppDispatch } from '../../../store/redux/hooks';
 import { OptionsDescription } from '../../../store/types';
 import '../../../styles/ChooseAmount.scss';
 import {
@@ -15,6 +16,7 @@ type Props = {
 const ChooseAmount: FC<Props> = ({ option }) => {
   const [amount, setAmount] = useState(0);
   const maxAmount = 10;
+  const dispatch = useAppDispatch();
 
   const checkRelevantPrice = (hasValue?: boolean): string => {
     return relevantPrice(option.price.value, amount, hasValue);

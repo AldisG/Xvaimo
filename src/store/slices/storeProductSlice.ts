@@ -1,8 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { Product } from '../types';
+
+type ProductsToBuy = {
+  title:'',
+  amount: 0,
+  totalPriceForAllItems: ''
+}
 
 const initialState = {
-  storeProduct: {} as Product,
+  storeProduct: [] as ProductsToBuy[],
 };
 
 const storeProductSlice = createSlice({
@@ -10,7 +15,7 @@ const storeProductSlice = createSlice({
   initialState,
   reducers: {
     setProductItemData: (state, action) => {
-      state.storeProduct =  action.payload;
+      state.storeProduct.push(action.payload);
     },
   },
 });
