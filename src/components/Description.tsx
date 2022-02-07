@@ -3,10 +3,12 @@ import { Product, OptionsDescription } from '../store/types';
 import BannerOffer from './elements/bannerOffer/BannerOffer';
 import ChooseAmount from './elements/chooseAmount/ChooseAmount';
 import DiscountTimer from './elements/discountTimer/DiscountTimer';
+import PayPalSection from './elements/PayPalSection/PayPalSection';
 import PricesOption from './elements/prices/PricesOption';
 import ProductTitle from './elements/productTitle/ProductTitle';
 import ProductRatings from './elements/ratings/ProductRatings';
 import ShippingAbility from './elements/shippingAbility/ShippingAbility';
+import '../styles/Description.scss';
 
 type Props = {
   product: Product;
@@ -33,12 +35,10 @@ const Description: FC<Props> = ({ product }) => {
       <hr />
       <BannerOffer />
       <DiscountTimer discount={discount} />
-      {/* <ChooseAmount options={options} /> */}
       {ItemsArray.map((item) => (
         <ChooseAmount key={item.label} option={item} />
       ))}
-
-      {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
+      <PayPalSection />
     </div>
   );
 };

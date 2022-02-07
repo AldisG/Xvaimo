@@ -1,1 +1,86 @@
 @import './sharedStyles.scss';
+
+.choose-amount-wrapper,
+.amount-wrapper {
+  display: flex;
+  align-items: center;
+}
+.choose-amount-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.amount-wrapper {
+  gap: 1rem;
+}
+.amount-input-wrapper {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+.item-price {
+  color: $lightGrey;
+  &.active {
+    color: $black;
+  }
+}
+// Buttons
+.amount-input {
+  color: $lightGrey;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  -moz-appearance: textfield;
+  &.active {
+    color: $black;
+  }
+}
+
+.amount-button,
+.amount-input {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: $white;
+  border: 0;
+  outline: 1px solid $veryLightGrey;
+  text-align: center;
+  &:hover,
+  &:focus {
+    outline: 2px solid $lightGrey;
+    z-index: 5;
+  }
+}
+
+.amount-button {
+  user-select: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: $lightGrey;
+  outline: 1px solid $lightGrey;
+
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+.active--add {
+  outline: 1px solid $orange;
+  color: $orange;
+  &:hover,
+  &:focus {
+    outline: 2px solid $orange;
+  }
+}
+.active--remove {
+  outline: 1px solid $black;
+  color: $black;
+  &:hover,
+  &:focus {
+    color: $black;
+    outline: 2px solid $black;
+  }
+}

@@ -1,5 +1,5 @@
 import svgIcon from '../../../img/checkmark.svg';
-const Checkmark = () => {
+const CheckmarkIcon = () => {
   return (
     <div className="checkmark-icon flex-c-c">
       <img src={svgIcon} alt={svgIcon} />
@@ -7,4 +7,4 @@ const Checkmark = () => {
   );
 };
 
-export default Checkmark;
+export default CheckmarkIcon;

@@ -3,7 +3,7 @@ $orangeBright: #ff9208;
 $redIsh: #f5515e;
 $lightOrange: #fff0e6;
 $white: #fff;
-$veryLightGrey: #e2e2e2;
+$veryLightGrey: #ebebeb;
 $lightGrey: #aaaaaa;
 $darkGrey: #727272;
 $black: #333;
@@ -15,17 +15,27 @@ $tagPaddings: 0.2rem 0.8rem;
   align-items: center;
 }
 .checkmark-icon {
-  width: 10px;
+  width: 1rem;
 }
 .star-icon,
-.clock-icon {
-  width: 12px;
+.clock-icon,
+.info-icon {
+  width: 1.2rem;
 }
+.shield-icon,
 .arrow-right-icon {
-  width: 10px;
+  width: 1rem;
 }
-
+.mastercard-icon,
+.apple-pay-icon,
+.visa-icon {
+  width: 2.2rem;
+  height: 1.6rem;
+}
+.shield-icon {
+  display: inline;
+}
 hr {
   border: none;
-  border-top: 1px solid $lightGrey;
+  border-top: 1px solid $veryLightGrey;
 }

@@ -1,0 +1,31 @@
+@import './sharedStyles.scss';
+
+.paypal-section-wrapper,
+.paypal__info-wrapper,
+.paypal__payments {
+  display: flex;
+}
+.paypal-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 1rem;
+  color: $lightGrey;
+  & b {
+    align-self: center;
+  }
+}
+.paypal__info-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+.paypal__payments {
+  gap: 0.4rem;
+}
+.paypal__header {
+  align-items: center;
+  & * {
+    margin-right: 0.5rem;
+    float: left;
+  }
+}
