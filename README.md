@@ -1,6 +1,11 @@
-### Xvaimo
+# Xvaimo
 
 This is a simple single page application, that fetches API data and displays it, imitating online shop.
+
+![](https://github.com/AldisG/xvaimo-gif/blob/main/xvaimo.gif)
+
+- You can check this App live here!
+  https://xvaimo-ag.netlify.app
 
 ## To run this project you need NodeJs and Git on your system.
 
@@ -22,7 +27,7 @@ This is a simple single page application, that fetches API data and displays it,
 - For cleaner code some functions have been moved to a separate file in 'util' folder
 - All style files are located in ' styles ' folder.
 
-# For this project I used:
+### For this project I used:
 
 React, Typescript, ReduxToolkit, Scss and if there was a need, I could also use Route, for dynamic links.
 I think, with the requirements provided to me, the technologies I used suited. One thing I would probably change is Icon components, meaning,
