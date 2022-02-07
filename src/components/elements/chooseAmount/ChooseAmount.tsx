@@ -1,6 +1,12 @@
 import { FC, useState } from 'react';
 import { OptionsDescription } from '../../../store/types';
 import '../../../styles/ChooseAmount.scss';
+import {
+  handleAmountClick,
+  handleCustomAmount,
+  relevantPrice,
+} from '../../../util/functions';
+import AddOrRemoveButton from '../assets/AddOrRemoveButton';
 
 type Props = {
   option: OptionsDescription;
@@ -8,41 +14,16 @@ type Props = {
 
 const ChooseAmount: FC<Props> = ({ option }) => {
   const [amount, setAmount] = useState(0);
-  const [activeAdd, setactiveAdd] = useState(false);
-  const [activeRemove, setactiveRemove] = useState(false);
   const maxAmount = 10;
 
-  const relevantPrice = (value?: boolean): string => {
-    if (value) {
-      return (option.price.value * amount).toFixed(2);
-    }
-    return option.price.value.toFixed(2);
+  const checkRelevantPrice = (hasValue?: boolean): string => {
+    return relevantPrice(option.price.value, amount, hasValue);
   };
-
-  const handleAmountClick = (buttonType?: string): void => {
-    if (buttonType) {
-      if (amount < maxAmount) {
-        setAmount(amount + 1);
-        return;
-      } else {
-        setAmount(maxAmount);
-        return;
-      }
-    }
-    if (amount > 0) {
-      setAmount(amount - 1);
-    }
+  const handleAmountClicks = (buttonType?: string): void => {
+    handleAmountClick(maxAmount, amount, setAmount, buttonType);
   };
-  const handleCustomAmount = (value: number): void => {
-    if (value < 0) {
-      setAmount(0);
-      return;
-    }
-    if (value > maxAmount) {
-      setAmount(maxAmount);
-      return;
-    }
-    setAmount(Math.floor(value));
+  const handleCustomAmounts = (value: number): void => {
+    handleCustomAmount(maxAmount, value, setAmount);
   };
 
   // Uz store padot tik [{buy: '1080p', totalPrice: amount * price}, {buy: 'battery', amount * price}]
@@ -54,37 +35,35 @@ const ChooseAmount: FC<Props> = ({ option }) => {
       <div className="amount-wrapper">
         <div className={`item-price ${amount > 0 ? 'active' : ''}`}>
           {`${option.price.currency.symbol} ${
-            amount <= 0 ? relevantPrice(false) : relevantPrice(true)
+            amount <= 0 ? checkRelevantPrice(false) : checkRelevantPrice(true)
           }`}
         </div>
 
         <div className="amount-input-wrapper">
-          <button
-            className={`amount-button  ${amount > 0 ? 'active--remove' : ''}`}
-            onClick={() => handleAmountClick()}
-            disabled={amount < 1}
-          >
-            -
-          </button>
+          <AddOrRemoveButton
+            value="-"
+            amount={amount}
+            maxAmount={maxAmount}
+            handleAmountClick={handleAmountClicks}
+          />
+
           <input
             className={`amount-input ${amount > 0 ? 'active' : ''}`}
             onFocus={(e) => e.target.select()}
             onChange={(e) => {
               const target = e.target as HTMLInputElement;
-              handleCustomAmount(Number(target.value));
+              handleCustomAmounts(Number(target.value));
             }}
             type="number"
             value={amount}
           />
-          <button
-            className={`amount-button amount-button--add ${
-              amount < maxAmount ? 'active--add' : ''
-            }`}
-            onClick={() => handleAmountClick('add')}
-            disabled={amount >= maxAmount}
-          >
-            +
-          </button>
+
+          <AddOrRemoveButton
+            value="+"
+            amount={amount}
+            maxAmount={maxAmount}
+            handleAmountClick={handleAmountClicks}
+          />
         </div>
       </div>
     </div>

@@ -10,9 +10,13 @@ const BannerOffer = () => {
         <span className="banner-offer-expo_header">EXPO</span>
       </div>
       <div className="banner-offer__free-shipping">
-        <div className="banner-offer__text-wrapper flex-c-c">
+        <div className="flex-c-c banner-offer__text-wrapper">
           <span className="circle"></span>
           Free shipping (up to $40)
+        </div>
+        <div className="flex-c-c banner-offer__text-wrapper ">
+          <span className="circle"></span>
+          On-time delivery guaranteed
         </div>
         <Link to="/">
           <ArrowRight />

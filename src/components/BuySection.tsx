@@ -10,7 +10,9 @@ type Props = {
 
 const BuySection: FC<Props> = ({ shipping }) => {
   const { lead_time, method, props } = shipping;
-  const roundPriceProperly = method.cost.value.toFixed(2);
+  const roundPriceProperly = Number(
+    method.cost.value.toFixed(2)
+  ).toLocaleString();
   const getNumbersNotString = (value: string): string => {
     return value.replace(/[days]+/, '');
   };

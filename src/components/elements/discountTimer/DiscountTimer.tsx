@@ -2,6 +2,7 @@ import { FC } from 'react';
 import '../../../styles/DiscountTimer.scss';
 import { Discount } from '../../../store/types';
 import ClockIcon from '../assets/ClockIcon';
+import CountDownElement from './CountDownElement';
 
 type Props = {
   discount: Discount;
@@ -19,7 +20,7 @@ const DiscountTimer: FC<Props> = ({ discount }) => {
         <div className="discount-timer__timer-icon">
           <ClockIcon />
         </div>
-        {end_date}
+        <CountDownElement end_date={end_date} />
       </div>
     </div>
   );
